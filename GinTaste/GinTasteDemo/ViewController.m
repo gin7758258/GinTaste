@@ -25,7 +25,6 @@
 #import "ViewController.h"
 @import GinTaste;
 
-
 @interface ViewController ()
 
 @end
@@ -35,11 +34,14 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-#if defined(__GTLOG_ON__) && __GTLOG_ON__
-  NSLog(@"555123");
-#endif
   
-  GTLOG("123");
+#pragma mark Test GTLogger
+  GTLOG("C Type String");
+  GTLOG(@"NSString string");
+  GTINFO(@"%d", 2);
+  GTDEBUG(@"%d", 3);
+  GTWARN(@"%d", 4);
+  GTERROR(@"%d", 5);
 }
 
 - (void)didReceiveMemoryWarning {

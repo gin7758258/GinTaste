@@ -35,16 +35,16 @@ typedef NS_ENUM(NSInteger, GTLogLevel) {
 
 // Actual Use Marco
 #if defined(__GTLOG_ON__) && __GTLOG_ON__
-#define GTLOG(string)                                                          \
-  [[GTLogger shareLogger] logWithLevel:GTLLINFO file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:nil, string]
-#define GTINFO(format, ...)                                                    \
-  [[GTLogger shareLogger] logWithLevel:GTLLINFO file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:format, ##__VA_ARGS__]
-#define GTDEBUG(format, ...)                                                   \
-  [[GTLogger shareLogger] logWithLevel:GTLLDEBUG file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:format, ##__VA_ARGS__]
-#define GTWARN(format, ...)                                                    \
-  [[GTLogger shareLogger] logWithLevel:GTLLWARN file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:format, ##__VA_ARGS__]
-#define GTERROR(format, ...)                                                   \
-  [[GTLogger shareLogger] logWithLevel:GTLLERROR file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:format, ##__VA_ARGS__]
+#define GTLOG(__string)                                                          \
+  [[GTLogger shareLogger] logWithLevel:GTLLINFO file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:nil, __string]
+#define GTINFO(__format, ...)                                                    \
+  [[GTLogger shareLogger] logWithLevel:GTLLINFO file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:__format, ##__VA_ARGS__]
+#define GTDEBUG(__format, ...)                                                   \
+  [[GTLogger shareLogger] logWithLevel:GTLLDEBUG file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:__format, ##__VA_ARGS__]
+#define GTWARN(__format, ...)                                                    \
+  [[GTLogger shareLogger] logWithLevel:GTLLWARN file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:__format, ##__VA_ARGS__]
+#define GTERROR(__format, ...)                                                   \
+  [[GTLogger shareLogger] logWithLevel:GTLLERROR file:__FILE__ funtion:__PRETTY_FUNCTION__ line:__LINE__ format:__format, ##__VA_ARGS__]
 #else
   #define GTLOG(string)         do{}while(0)
   #define GTINFO(format, ...)   do{}while(0)

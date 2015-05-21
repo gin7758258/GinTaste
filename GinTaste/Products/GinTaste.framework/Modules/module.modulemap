@@ -1,0 +1,6 @@
+framework module GinTaste {
+  umbrella header "GinTaste.h"
+
+  export *
+  module * { export * }
+}

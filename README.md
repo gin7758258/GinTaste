@@ -8,8 +8,8 @@ Brief
 -------------
 GinTaste contain these moudles:
 
-- **UIKit:** Extend Some UIKit framework
-- **Foundation:** Extend Foundation framework
+- **GTUIKit:** Extend Some UIKit framework
+- **GTFoundation:** Extend Foundation framework
 - **Common Business:** Collects some useful codes can be applied to all App's project.
 
 Requirements
